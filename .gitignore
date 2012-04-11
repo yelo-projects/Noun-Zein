@@ -1,0 +1,14 @@
+.git/
+.svn/
+.hg/
+silverstripe-cache
+_resampled
+.sass-cache
+#_ss_environment.php
+*~
+*.swp
+*.swo
+assets/Uploads
+assets/.sqlitedb
+log
+_temp*

@@ -1,0 +1,6 @@
+#! /bin/bash
+
+git pull
+echo  chmodding....
+rm -r silverstripe-cache && mkdir silverstripe-cache
+chmod 777 -R *
