@@ -1,0 +1,21 @@
+.menu{
+	@extend .listreset;
+	display:table;
+	width:100%;
+	height:inherit;
+	li{
+		display:table-cell;
+		vertical-align:middle;
+		
+	}
+}
+
+#Footer{
+	.menu{
+		width:auto;
+		display:inline;
+	}
+	p{
+		display:inline;
+	}
+}

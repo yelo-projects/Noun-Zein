@@ -1,0 +1,24 @@
+.clear{
+	float:left;
+	clear:both;
+}
+
+.division{
+	margin:0;padding:0;width:100%;clear:both;
+}
+
+.MainWrappers{
+	@extend .division;
+	width:100%;
+}
+
+.listReset{
+	list-style:none;
+	padding:0;
+	margin:0;
+	li{
+		list-style:none;
+		padding:0;
+		margin:0;
+	}
+}

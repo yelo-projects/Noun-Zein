@@ -1,0 +1,36 @@
+/* line 2, ../sass/ie6.sass */
+#Sidebar ul#Menu2 li a { width: 185px; }
+/* line 5, ../sass/ie6.sass */
+#Sidebar ul#Menu2 li li a { width: 183px; }
+/* line 9, ../sass/ie6.sass */
+#Sidebar ul#Menu2 li a:hover { background-image: none; background: #dcdcdc; }
+/* line 13, ../sass/ie6.sass */
+#Sidebar ul#Menu2 li a.current { background-image: none; background: #dcdcdc; }
+/* line 17, ../sass/ie6.sass */
+#Sidebar ul#Menu2 li a.current:hover { background-image: none; background: #dcdcdc; }
+/* line 22, ../sass/ie6.sass */
+#Sidebar ul#Menu2 li li a.levelb:hover, #Sidebar ul#Menu2 li li a.current { background: #bcbcbc; }
+
+/* line 26, ../sass/ie6.sass */
+label { margin-bottom: -10px; }
+
+/* line 30, ../sass/ie6.sass */
+div.tab .field { clear: none !important; padding: 0 !important; margin: 0 !important; }
+/* line 35, ../sass/ie6.sass */
+div.tab .field label { margin: 0 !important; }
+
+/* line 39, ../sass/ie6.sass */
+input.action { padding: 2px !important; }
+
+/* line 44, ../sass/ie6.sass */
+#Sidebar input.action { width: 50px; margin-top: -27px; }
+/* line 48, ../sass/ie6.sass */
+#Sidebar .middleColumn { width: 112px; }
+
+/* line 52, ../sass/ie6.sass */
+span.middleColumn { display: inline-block; }
+
+/* line 56, ../sass/ie6.sass */
+html body #SearchForm_SearchForm { width: 240px; margin-top: -5px; }
+/* line 60, ../sass/ie6.sass */
+html body #SearchForm_SearchForm #SearchForm_SearchForm_action_results { float: right; margin-top: -25px; }

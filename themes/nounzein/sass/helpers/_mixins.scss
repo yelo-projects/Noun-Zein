@@ -1,0 +1,93 @@
+@mixin corner($size:5px) {
+-moz-border-radius: $size;
+-webkit-border-radius: $size;
+-khtml-border-radius: $size;
+ border-radius: $size;
+}
+
+/*
+* Apply a CSS3 border radius to the bottom corners only
+* @include borderBottomRadius(4px);
+*/
+@mixin cornerBottom($radius: 4px) {
+-webkit-border-bottom-right-radius: $radius;
+-webkit-border-bottom-left-radius: $radius;
+-moz-border-radius-bottomright: $radius;
+-moz-border-radius-bottomleft: $radius;
+border-bottom-right-radius: $radius;
+border-bottom-left-radius: $radius;
+}
+
+/*
+* Apply a CSS3 border radius to the left corners only
+* @include borderLeftRadius(4px);
+*/
+@mixin cornerLeft($radius: 4px) {
+-webkit-border-top-left-radius: $radius;
+-webkit-border-bottom-left-radius: $radius;
+-moz-border-radius-topleft: $radius;
+-moz-border-radius-bottomleft: $radius;
+border-top-left-radius: $radius;
+border-bottom-left-radius: $radius;
+}
+
+
+
+@mixin reset-list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin gradient($from, $to, $from_pos: 0%, $to_pos: 100%, $fallback: $to) {
+  background: $fallback; /* Old browsers */
+  background: -moz-linear-gradient(top, $from $from_pos, $to $to_pos); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop($from_pos, $from), color-stop($to_pos, $to)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $from $from_pos,$to $to_pos); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $from $from_pos,$to $to_pos); /* Opera11.10+ */
+  background: -ms-linear-gradient(top, $from $from_pos,$to $to_pos); /* IE10+ */
+  background: linear-gradient(top, $from $from_pos,$to $to_pos); /* W3C */
+}
+
+/* Kudos to http://www.colorzilla.com/gradient-editor/ */
+@mixin gradient-horizontal($from, $to, $from_pos: 0%, $to_pos: 100%) {
+  background: $from; /* Old browsers */
+  background: -moz-linear-gradient(left, $from $from_pos, $to $to_pos); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop($from_pos, $from), color-stop($to_pos, $to)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, $from $from_pos,$to $to_pos); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, $from $from_pos,$to $to_pos); /* Opera11.10+ */
+  background: -ms-linear-gradient(left, $from $from_pos,$to $to_pos); /* IE10+ */
+  background: linear-gradient(left, $from $from_pos,$to $to_pos); /* W3C */
+}
+
+
+@mixin columns($count: 2, $gap: 20px) {
+  -moz-column-count: $count;
+-moz-column-gap: $gap;
+-webkit-column-count: $count;
+-webkit-column-gap: $gap;
+column-count: $count;
+column-gap: $gap;
+}
+
+/*
+* Apply a CSS3 box-shadow
+* @include boxShadow(5px, 5px, 10px, #000);
+*/
+@mixin boxShadow($x: 5px, $y: 5px, $blur: 10px, $spread: 10px, $color: #000) {
+-webkit-box-shadow: $x $y $blur $spread $color;
+-moz-box-shadow: $x $y $blur $spread $color;
+box-shadow: $x $y $blur $spread $color;
+}
+
+/*
+* Apply an inset CSS3 box-shadow
+* @include insetBoxShadow(5px, 5px, 10px, #000);
+*/
+@mixin insetBoxShadow($x: 5px, $y: 5px, $blur: 10px, $spread: 10px, $color: #000) {
+-webkit-box-shadow: inset $x $y $blur $spread $color;
+       -moz-box-shadow: inset $x $y $blur $spread $color;
+box-shadow: inset $x $y $blur $spread $color;
+}
+
+

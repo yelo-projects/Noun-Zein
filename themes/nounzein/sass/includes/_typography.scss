@@ -1,0 +1,173 @@
+@import "colors";
+
+.typography{
+	*{
+		font-family: Verdana, Lucida, Arial, sans-serif;
+	}
+	p{
+		color: whitesmoke;
+		line-height: 18px;
+		font-size: 11px;
+		margin: 0 0 12px 0;
+	}
+	blockquote{
+		margin: 10px;
+		font-size: 1.4em;
+		color: #777;
+		font-style: italic;
+	}
+	q{
+		display: block;
+		font-size: 0.8em;
+		margin: 1em 1em;
+		padding: 0.5em;
+		border: 1px #ccc solid;
+	}
+	a{
+		color:#54a6de;
+		text-decoration:none;
+		&:visited {
+			outline:none;
+			color:#54a6de;
+		}
+		&:hover{
+			text-decoration:underline;
+		}
+		&:hover,&:active, &.current{
+			text-decoration:underline;
+		}
+		&[href$=".pdf"],
+		&[href$=".PDF"],
+		&.pdf{
+			padding: 2px;
+			padding-left: 20px;
+			background: url(../images/icons/page_white_acrobat.png) no-repeat left center;
+		}
+		&[href$=".doc"],
+		&[href$=".DOC"],
+		&.doc{
+			padding: 2px;
+			padding-left: 20px;
+			background: url(../images/icons/page_word.png) no-repeat left center;
+		}
+		&[href$=".xls"],
+		&[href$=".XLS"],
+		&.xls{
+			padding: 2px;
+			padding-left: 20px;
+			background: url(../images/icons/page_excel.png) no-repeat left center;
+		}
+		&[href$=".gz"],
+		&[href$=".GZ"],
+		&[href$=".gzip"],
+		&[href$=".GZIP"],
+		&[href$=".zip"],
+		&[href$=".ZIP"],
+		&.archive{
+			padding: 2px;
+			padding-left: 20px;
+			background: url(../images/icons/page_white_zip.png) no-repeat left center;
+		}
+		&[href$=".exe"],
+		&[href$=".EXE"],
+		&.application{
+			padding: 2px;
+			padding-left: 20px;
+			background: url(../images/icons/application.png) no-repeat left center;
+		}
+	}
+	ul, ol{
+		margin: 0 0 18px 24px;
+		color: $mainColor;
+	}
+	h1, h2{
+		color: $mainColor;
+		margin: 0 0 18px 0;
+		font-weight: 300;
+		font-family: Tahoma, Verdana, sans-serif;
+	}
+	h1{
+		color: $secondColor;
+		font-size: 24px;
+	}
+	h2{
+		color: darken($secondColor,2);
+		font-size: 20px;
+	}
+	h3{
+		color: darken($secondColor,5);
+		margin: 0 0 18px 0;
+		font-weight: 300;
+		clear: both;
+		font-size: 18px;
+	}
+	h4{
+		font-size: 16px;
+		color: darken($secondColor,10);
+		width: 95%;
+		font-weight: 300;
+		line-height: 18px;
+		border-bottom: 1px solid #ccc;
+		margin: 0 0 16px 0;
+	}
+	h5{
+		font-size: 14px;
+		color: darken($secondColor,15);
+		font-weight: 700;
+		margin: 0 0 12px 0;
+	}
+	h6{
+		font-size: 13px;
+		color: darken($secondColor,20);
+		line-height: 1.4em;
+		margin: 0 0 12px 0;
+	}
+	pre{
+		font-family: "Courier New",Courier;
+		display: block;
+		font-size: 1.2em;
+		margin: 2em 5em;
+		padding: 0.5em;
+		border: 1px #ccc solid;
+		background: #eee;
+	}
+	table{
+		margin: 0 0 18px 0;
+		font-size: 11px;
+		color: #666;
+		border-collapse: collapse;
+	}
+	td{
+		border: 1px solid #999;
+		padding: 5px;
+	}
+	.left{
+		text-align: left;
+	}
+	.center{
+		text-align: center;
+	}
+	.right{
+		text-align: right;
+	}
+	img{
+		border: none;
+	}
+	&.right{
+		float: right;
+		margin-left: 20px;
+	}
+	&.left{
+		float: left;
+	}
+	&.leftAlone{
+		float: left;
+		margin-right: 100%;
+	}
+	&.center{
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+}
