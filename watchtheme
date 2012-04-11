@@ -1,0 +1,4 @@
+#! /bin/bash
+cd themes/nounzein
+compass watch
+
