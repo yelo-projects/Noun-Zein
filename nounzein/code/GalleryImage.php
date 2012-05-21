@@ -1,7 +1,7 @@
 <?php
 class GalleryImage extends Image{
 	
-	static $has_one = array('Gallery'=>'Gallery');
+	static $has_one = array('Gallery'=>'Gallery','Collection'=>'Collection');
         
 	static $summary_fields = array(
 		'Name',
@@ -21,6 +21,12 @@ class GalleryImage extends Image{
 			$this->_Title = str_replace('-',' ',$t[1]);
 		}
 		return $this->_Title;
+	}
+
+	public function getCollectionWebSafeName(){
+		if($c = $this->Collection()){
+			return $c->getWebSafeName();
+		}
 	}
 
 	public function SetFixedSize($width, $height) {
@@ -104,6 +110,24 @@ class GalleryImage extends Image{
         }
     }
 
+	public function SetRandomCroppedSize($min=100,$max=200,$inc=50){
+		$w = $this->getWidth();
+		$h = $this->getHeight();
+		//round($gd->getHeight()/($gd->getWidth()/$width)
+		if($h>$w){
+			$hN = $this->_getRandomSize($min,$max,$inc);
+			$wP = round($h/$w/$hN);
+			$wN = $this->_getRandomSize($min,$wP,$inc);
+		}
+		else{
+			$wN = $this->_getRandomSize($min,$max,$inc);
+			$hP = round($w/$h/$wN);
+			$hN = $this->_getRandomSize($min,$hP,$inc);
+		}
+		return $this->CroppedImage($wN,$hN);
+	}
+
+
 	public function SetRandomSize($min=100,$max=200,$inc=50){
 		$w = $this->getWidth();
 		$h = $this->getHeight();
@@ -126,8 +150,8 @@ class GalleryImage extends Image{
 	protected function _getRandomSize($min=100,$max=300,$inc=100){
 		$range = range($min, $max, $inc);
 		$rnd = rand(0, count($range)-1);
-		$size = $range[$rnd];
-		if(!$size){$size = $min;}
+		$size = ($rnd==count($range)-1) ? $inc * $rnd : $range[$rnd];
+		if(!$size){$size = $inc;}
 		return $size;
 	}
 

@@ -42,6 +42,7 @@ Body{
 }
 
 #Footer{
+	margin-top:20px;
 	font-size:10px;
 }
 
@@ -50,6 +51,7 @@ Body{
 		@extend .listreset;
 		li{
 			float:left;
+			padding:1px;
 			a{
 				margin:0 auto;
 				display:block;

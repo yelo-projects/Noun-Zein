@@ -41,18 +41,29 @@
 						<% end_if %>
 					<% end_control %>
 					</li>
-					<% control Menu(1) %>
-					<li><a href="$Link" title="Go to the $Title.XML page" class="$LinkingMode"><span>$MenuTitle.XML</span></a></li>
-					<% end_control %>
+					<li id="SiteMenu"><h2>site</h2>
+						<ul>
+						<% control CustomMenu(Footer) %><li class="menu$ID"><a href="$Link" class="$LinkingMode" title="Go to the &quot;{$Title}&quot; page">$MenuTitle</a></li><% end_control %>
+						</ul>
+					</li>
 					<% if Title = Home %>
-					<li class="$linkingMode item-$Pos $FirstLast">
-						<a href="$BaseHref" title="Show All" data-filter="*" class="filter">Show All</a>
-					</li>
-					<% control ChildrenOf(Galleries) %>
-					<li class="$linkingMode item-$Pos $FirstLast">
-						<a href="$Link" title="Show $Title.XML page" data-filter=".$TitleXML" class="$LinkingMode item-$Pos  $FirstLast $MenuTitle.XML-$Top.GalleryTitle filter">$MenuTitle.XML</a>
-					</li>
-					<% end_control %>
+					<li id="CategoriesMenu"><h2>Categories</h2><ul>
+						<li class="$linkingMode item-$Pos $FirstLast">
+							<a href="$BaseHref" title="Show All" data-filter="*" class="filter current">Show All</a>
+						</li>
+						<% control ChildrenOf(Galleries) %>
+						<li class="$linkingMode item-$Pos $FirstLast">
+							<a href="$Link" title="Show $Title.XML" data-filter=".$TitleXML" class="$LinkingMode item-$Pos  $FirstLast $MenuTitle.XML-$Top.GalleryTitle filter">$MenuTitle.XML</a>
+						</li>
+						<% end_control %>
+					</ul></li>
+					<li id="CollectionsMenu"><h2>Collections</h2><ul>
+						<% control Collections %>
+						<li class="$LinkingMode item-$Pos $FirstLast">
+							<a href="#" title="show $Name.XML" data-filter=".collection-$WebSafeName" class="$LinkingMode item-$Pos $FirstLast $WebSafeName filter">$Name</a>
+						</li>
+						<% end_control %>
+					</ul></li>
 					<% end_if %>
 				</ul>
 				<div class="clear"></div>
@@ -74,19 +85,6 @@
 
 		<div id="Footer">
 			<div class="contents">
-				<ul class="menu">
-				<% control CustomMenu(Footer) %>
-					<li class="menu$ID">
-						<a href="$Link" class="$LinkingMode" title="Go to the &quot;{$Title}&quot; page">$MenuTitle</a>
-					</li>
-					<% if Last %>
-					<% else %>
-					<li class="separator">
-					|
-					</li>
-					<% end_if %>
-				<% end_control %>
-				</ul>
 				<p class="address">$SiteConfig.BusinessAddress</p><p class="copyright">Copyright &copy; nounzein 2010</p>
 			</div>
 			<div class="clear"></div>

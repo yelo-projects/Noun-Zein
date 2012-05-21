@@ -18,13 +18,13 @@ jQuery(document).ready(function($){
 
 
 
-	var $container = $('.gallery');
+	var $container = $('.gallery'), $filters = $('#MainMenu li a.filter');
 
 	$container.isotope({
 		itemSelector : 'li',
 		layoutMode : 'masonry',
 		masonry: {
-			columnWidth: 50
+			columnWidth: 52
 		}
 	});
 
@@ -32,7 +32,9 @@ jQuery(document).ready(function($){
 
 	$('#MainMenu li a.filter').click(function(e){
 		e.preventDefault();
-		var selector = $(this).attr('data-filter');
+		var $el = $(this);
+		var selector = $el.attr('data-filter');
+		$filters.not($el.addClass('current')).removeClass('current');
 		$container.isotope({filter: selector});
 		return false;
 	})
