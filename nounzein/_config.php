@@ -24,14 +24,14 @@ i18n::set_locale('en_US');
 SiteTree::enable_nested_urls();
 
 Director::set_dev_servers($_dev_servers);
+ini_set('display_errors', '0');
 
 if(SERVER_DEV){
 	ini_set('log_errors', 'On');
 	ini_set('error_log', 'log');
 	Director::set_environment_type('dev');
-	ini_set('display_errors', E_ALL);
 	ini_set('display_startup_errors', TRUE);
-	error_reporting(E_ALL);
+	error_reporting(E_ALL & ~E_STRICT & ~E_NOTICE);
 	Security::setDefaultAdmin('admin','password');
 }
 
