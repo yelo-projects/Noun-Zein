@@ -17,21 +17,22 @@
 		<% require javascript(nounzein/javascript/jquery-1.6.min.js) %>
 		<% require javascript(nounzein/javascript/jquery.isotope.min.js) %>
 		<% require javascript(nounzein/javascript/jquery.colorbox.min.js) %>
+		<% require javascript(nounzein/javascript/jquery.history.js) %>
 		<% require javascript(nounzein/javascript/main.js) %>
 	</head>
-<body class="typography">
+<body>
 	<div id="Body">
 		
 		<div id="Header">
 			<div id="Navigation">
 				<ul id="MainMenu" class="menu">
-					<li id="Logo">
+					<li id="SiteMenu"><h2>
 					<% control SiteConfig %>
 						<% if HeaderImage %>
 							<% control HeaderImage %>
-							<h1><a href="$BaseHref" title="home">
+							<a href="$BaseHref" title="home" id="Logo">
 								$SetWidth(50)
-							</a></h1>
+							</a>
 							<% end_control %>
 						<% else %>
 						<a href="$BaseHref" title="home">
@@ -39,32 +40,35 @@
 						<span class="line2" align="justify">$Tagline</span>
 						</a>
 						<% end_if %>
-					<% end_control %>
-					</li>
-					<li id="SiteMenu"><h2>site</h2>
+					<% end_control %><span id="nounzein-Title">Nounzein</span></h2>
 						<ul>
+						<li class="menuFooter"><a href="#/" id="nounzein-all" class="filter" title="Go to Home">Home</a></li>
+						<li class="menuFooter"><a href="#/nounzein/about" id="nounzein-about" class="filter" title="Go to About">About</a></li>
 						<% control CustomMenu(Footer) %><li class="menu$ID"><a href="$Link" class="$LinkingMode" title="Go to the &quot;{$Title}&quot; page">$MenuTitle</a></li><% end_control %>
 						</ul>
 					</li>
-					<% if Title = Home %>
-					<li id="CategoriesMenu"><h2>Categories</h2><ul>
-						<li class="$linkingMode item-$Pos $FirstLast">
-							<a href="$BaseHref" title="Show All" data-filter="*" class="filter current">Show All</a>
+					<li id="CollectionsMenu"><h2><span id="collection-Title">Collections</span></h2><ul>
+						<li class="item">
+							<a href="$BaseHref" title="Show All" id="collection-all" class="filter">All</a>
+						</li>
+						<% control Collections %>
+						<li class="$LinkingMode item-$Pos $FirstLast">
+							<a href="$Link" title="show $Name.XML" id="collection-$WebSafeName" class="$LinkingMode item-$Pos $FirstLast $WebSafeName filter">$Name</a>
+							<div class="category-content">$Content</div>
+						</li>
+						<% end_control %>
+					</ul></li>
+					<li id="CategoriesMenu"><h2><span id="gallery-Title">Categories</span></h2><ul>
+						<li class="item">
+							<a href="$BaseHref" title="Show All" id="gallery-all" class="filter current">All</a>
 						</li>
 						<% control ChildrenOf(Galleries) %>
 						<li class="$linkingMode item-$Pos $FirstLast">
-							<a href="$Link" title="Show $Title.XML" data-filter=".$TitleXML" class="$LinkingMode item-$Pos  $FirstLast $MenuTitle.XML-$Top.GalleryTitle filter">$MenuTitle.XML</a>
+							<a href="$Link" title="Show $Title.XML" id="gallery-$TitleXML" class="$LinkingMode item-$Pos  $FirstLast $MenuTitle.XML-$Top.GalleryTitle filter">$MenuTitle.XML</a>
+							<div class="category-content">$Content</div>
 						</li>
 						<% end_control %>
 					</ul></li>
-					<li id="CollectionsMenu"><h2>Collections</h2><ul>
-						<% control Collections %>
-						<li class="$LinkingMode item-$Pos $FirstLast">
-							<a href="#" title="show $Name.XML" data-filter=".collection-$WebSafeName" class="$LinkingMode item-$Pos $FirstLast $WebSafeName filter">$Name</a>
-						</li>
-						<% end_control %>
-					</ul></li>
-					<% end_if %>
 				</ul>
 				<div class="clear"></div>
 			</div>
@@ -84,6 +88,12 @@
 
 
 		<div id="Footer">
+			<div class="links">
+				<a href="$BaseHref" class="" title="Go to the Home Page">Home</a>
+				<% control CustomMenu(Footer) %>
+				|	<a href="$Link" class="" title="Go to the &quot;{$Title}&quot; page">$MenuTitle</a>
+				<% end_control %>
+			</div>
 			<div class="contents">
 				<p class="address">$SiteConfig.BusinessAddress</p><p class="copyright">Copyright &copy; nounzein 2010</p>
 			</div>

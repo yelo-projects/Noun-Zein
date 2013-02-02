@@ -9,10 +9,11 @@
 	<% end_if %>
 
 		<h2>$Title</h2>
-
-		$Content
-		$Form
-		$PageComments
-		$Me
+		<div class="typography">
+			$Content
+			$Form
+			$PageComments
+			$Me
+		</div>
 		</div>
 </div>

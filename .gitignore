@@ -8,6 +8,7 @@ _resampled
 *~
 *.swp
 *.swo
+*.sublime*
 assets/Uploads
 assets/.sqlitedb
 log

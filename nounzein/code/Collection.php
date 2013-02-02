@@ -3,7 +3,8 @@
 class Collection extends DataObject{
 
 	static $db = array(
-		'Name'	=>	'Varchar'
+		'Name'	=>	'Varchar',
+		'Content' => 'HTMLText'
 	);
 	static $has_many = array(
 		'Images'	=>	'GalleryImage'
@@ -31,6 +32,7 @@ class Collection extends DataObject{
 		);
 		$images->setAddTitle('Image');
 		$fields->push($images);
+		$fields->push(new HTMLEditorField('Content','Description')); 
 		return $fields;
 	} 
 

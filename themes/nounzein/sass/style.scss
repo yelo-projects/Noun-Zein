@@ -9,12 +9,13 @@
 @import "includes/units";
 @import "includes/form";
 @import "includes/isotope";
+@import "includes/typography";
 
 html,body{@extend .MainWrappers;}
 
 #Body, #Header, #Footer,#Content{
 	@extend .division;
-	width:$totalSize;
+	max-width:$totalSize;
 	min-height:50px;
 	margin:{
 		left:auto;
@@ -31,31 +32,44 @@ Body{
 }
 #Body{
 	padding:{
-		left:10px;
-		right:10px;
+		left:20px;
+		right:20px;
 		top:0;
 		bottom:0;
 	}
-	background: none repeat scroll 0 0 #2F2F2F;
+	background: none repeat scroll 0 0 #fff;///$mainBackground;
     color: #C6C6C6;
 	//@include boxShadow(3px, 3px, 20px, 3px, darken(#2F2F2F,5));
 }
 
 #Footer{
 	margin-top:20px;
-	font-size:10px;
+	font-size:12px;
+	.links{
+		float:left;
+		margin-right:10px;
+	}
+}
+
+#Navigation{
+	position:relative;
+	z-index:400;
+}
+
+.content{
+	margin-top:25px;
 }
 
 .gallery{
+	margin:0 auto;
 	ul{
 		@extend .listreset;
 		li{
 			float:left;
-			padding:1px;
+			margin-bottom:10px;
 			a{
 				margin:0 auto;
 				display:block;
-				padding:0;
 				line-height:0;
 				position:relative;
 				&.loading{
@@ -96,3 +110,5 @@ Body{
 		float:left;
 	}
 }
+
+@import "includes/responsive";

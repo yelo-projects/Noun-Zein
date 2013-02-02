@@ -1,0 +1,64 @@
+
+.menu{
+	li{
+		position:relative;
+		>h2, ul li a, ul li{
+			height:50px;
+			font-size:150%;
+			line-height:2.5;
+		}
+		ul{
+			position:absolute;
+			display:none;
+			li{
+				display:block;
+				a{
+					line-height:1.5;
+				}
+			}
+		}
+		&:hover, &.clicked{
+			ul{
+				display:block;
+			}
+		}
+		&#SiteMenu{
+			ul{
+				padding-left:50px;
+				li{
+					margin-right:50px;
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 600px){
+	#Body{
+		padding:0px;
+	}
+	.menu, .menu li:hover, .menu ul{
+		-webkit-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, .2);
+		box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, .2);
+	}
+	.menu{
+		position:fixed;
+		li{
+			&#SiteMenu{
+				width:50px;
+				ul{
+					padding-left:0;
+					width:200px;
+					li{
+						margin-right:0px;
+					}
+				}
+				>h2 span{
+					display:none;
+				}
+			}
+		}
+	}
+	.links{
+		font-size:20px;
+	}
+}

@@ -23,10 +23,13 @@ class GalleryImage extends Image{
 		return $this->_Title;
 	}
 
+	public function TitleXML(){
+		return strtolower(str_replace(' ','_',Convert::raw2xml($this->Title())));
+	}
+
 	public function getCollectionWebSafeName(){
-		if($c = $this->Collection()){
-			return $c->getWebSafeName();
-		}
+		if($c = $this->Collection()){return $c->getWebSafeName();}
+		return 'no_collection';
 	}
 
 	public function SetFixedSize($width, $height) {
@@ -110,20 +113,30 @@ class GalleryImage extends Image{
         }
     }
 
-	public function SetRandomCroppedSize($min=100,$max=200,$inc=50){
+	public function SetRandomCroppedSize($min=100,$max=300,$inc=100){
 		$w = $this->getWidth();
 		$h = $this->getHeight();
 		//round($gd->getHeight()/($gd->getWidth()/$width)
-		if($h>$w){
+		//if($h>$w){
 			$hN = $this->_getRandomSize($min,$max,$inc);
-			$wP = round($h/$w/$hN);
-			$wN = $this->_getRandomSize($min,$wP,$inc);
-		}
+			$wP = round($w * ($hN/$h));
+			if($wP>$hN){
+				$target = $hN;
+			}
+			else{
+				$target = $wP;
+			}
+			$wN = 0;
+			while($wN<$target){$wN+=$inc;}
+			//$wN = $this->_getRandomSize($min,$wP,$inc);
+		//}
+		/**
 		else{
 			$wN = $this->_getRandomSize($min,$max,$inc);
 			$hP = round($w/$h/$wN);
 			$hN = $this->_getRandomSize($min,$hP,$inc);
 		}
+		**/
 		return $this->CroppedImage($wN,$hN);
 	}
 
@@ -148,10 +161,11 @@ class GalleryImage extends Image{
 	}
 
 	protected function _getRandomSize($min=100,$max=300,$inc=100){
+		if($max<$min+$inc){return $min;}
 		$range = range($min, $max, $inc);
 		$rnd = rand(0, count($range)-1);
-		$size = ($rnd==count($range)-1) ? $inc * $rnd : $range[$rnd];
-		if(!$size){$size = $inc;}
+		$size = $range[$rnd];
+		//if(!$size){$size = $inc;}
 		return $size;
 	}
 

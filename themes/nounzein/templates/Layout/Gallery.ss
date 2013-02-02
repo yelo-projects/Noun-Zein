@@ -1,5 +1,6 @@
 <h2>$Title</h2>
-
-$Content
+<div class="typography">
+	$Content
+</div>
 <div class="clear"></div>
 <% include Gallery %>

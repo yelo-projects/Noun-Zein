@@ -2,8 +2,8 @@
 	<div id="Gallery" class="gallery">
 		<ul>
 		<% control Images %>
-			<li class="$FirstLast $EvenOdd $ParentTitleXML collection-$CollectionWebSafeName" rel="$ParentTitleXML">
-				<a class="image" href="$URL" rel="$ParentTitleXML" title="$Title">
+			<li class="$FirstLast $EvenOdd gallery-$ParentTitleXML collection-$CollectionWebSafeName" rel="$ParentTitleXML">
+				<a class="image" href="$URL" rel="$CollectionWebSafeName" title="$Title" id="image-{$ParentTitleXML}-{$TitleXML}">
 				<% control setRandomCroppedSize %>
 				<img width="$Width" height="$Height" src="$URL" alt="$Title">
 				<span class="load-anim"></span>

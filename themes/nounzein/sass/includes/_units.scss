@@ -1,3 +1,4 @@
-$column:180px;
-$margin:2px;
-$totalSize:(($column+$margin*2)*5);
+$column:100px;
+$margins:5px;
+$columnsNumber:10;
+$totalSize:$column * $columnsNumber + $margins*($columnsNumber - 1);

@@ -1,0 +1,66 @@
+/* line 3, ../sass/includes/_typography.scss */
+.typography { padding: 10px; }
+/* line 5, ../sass/includes/_typography.scss */
+.typography * { font-family: Verdana, Lucida, Arial, sans-serif; line-height: 25px; font-size: 16px; }
+/* line 10, ../sass/includes/_typography.scss */
+.typography p { color: #222; margin: 0 0 12px 0; }
+/* line 14, ../sass/includes/_typography.scss */
+.typography blockquote { margin: 10px; font-size: 1.4em; color: #777; font-style: italic; }
+/* line 20, ../sass/includes/_typography.scss */
+.typography q { display: block; font-size: 0.8em; margin: 1em 1em; padding: 0.5em; border: 1px #cccccc solid; }
+/* line 27, ../sass/includes/_typography.scss */
+.typography a { color: #54a6de; text-decoration: none; }
+/* line 30, ../sass/includes/_typography.scss */
+.typography a:visited { outline: none; color: #54a6de; }
+/* line 34, ../sass/includes/_typography.scss */
+.typography a:hover { text-decoration: underline; }
+/* line 37, ../sass/includes/_typography.scss */
+.typography a:hover, .typography a:active, .typography a.current { text-decoration: underline; }
+/* line 42, ../sass/includes/_typography.scss */
+.typography a[href$=".pdf"], .typography a[href$=".PDF"], .typography a.pdf { padding: 2px; padding-left: 20px; background: url(../images/icons/page_white_acrobat.png) no-repeat left center; }
+/* line 49, ../sass/includes/_typography.scss */
+.typography a[href$=".doc"], .typography a[href$=".DOC"], .typography a.doc { padding: 2px; padding-left: 20px; background: url(../images/icons/page_word.png) no-repeat left center; }
+/* line 56, ../sass/includes/_typography.scss */
+.typography a[href$=".xls"], .typography a[href$=".XLS"], .typography a.xls { padding: 2px; padding-left: 20px; background: url(../images/icons/page_excel.png) no-repeat left center; }
+/* line 67, ../sass/includes/_typography.scss */
+.typography a[href$=".gz"], .typography a[href$=".GZ"], .typography a[href$=".gzip"], .typography a[href$=".GZIP"], .typography a[href$=".zip"], .typography a[href$=".ZIP"], .typography a.archive { padding: 2px; padding-left: 20px; background: url(../images/icons/page_white_zip.png) no-repeat left center; }
+/* line 74, ../sass/includes/_typography.scss */
+.typography a[href$=".exe"], .typography a[href$=".EXE"], .typography a.application { padding: 2px; padding-left: 20px; background: url(../images/icons/application.png) no-repeat left center; }
+/* line 80, ../sass/includes/_typography.scss */
+.typography ul, .typography ol { margin: 0 0 18px 24px; color: #eeeeee; }
+/* line 84, ../sass/includes/_typography.scss */
+.typography h1, .typography h2 { margin: 0 0 18px 0; font-weight: 300; font-family: Tahoma, Verdana, sans-serif; }
+/* line 89, ../sass/includes/_typography.scss */
+.typography h1 { color: #8c8669; font-size: 24px; }
+/* line 93, ../sass/includes/_typography.scss */
+.typography h2 { color: #868065; font-size: 20px; }
+/* line 97, ../sass/includes/_typography.scss */
+.typography h3 { color: #7d785e; margin: 0 0 18px 0; font-weight: 300; clear: both; font-size: 18px; }
+/* line 104, ../sass/includes/_typography.scss */
+.typography h4 { font-size: 16px; color: #6f6a53; width: 95%; font-weight: 300; line-height: 18px; border-bottom: 1px solid #cccccc; margin: 0 0 16px 0; }
+/* line 113, ../sass/includes/_typography.scss */
+.typography h5 { font-size: 14px; color: #605c48; font-weight: 700; margin: 0 0 12px 0; }
+/* line 119, ../sass/includes/_typography.scss */
+.typography h6 { font-size: 13px; color: #524e3d; line-height: 1.4em; margin: 0 0 12px 0; }
+/* line 125, ../sass/includes/_typography.scss */
+.typography pre { font-family: "Courier New",Courier; display: block; font-size: 1.2em; margin: 2em 5em; padding: 0.5em; border: 1px #cccccc solid; background: #eee; }
+/* line 134, ../sass/includes/_typography.scss */
+.typography table { margin: 0 0 18px 0; font-size: 11px; color: #666; border-collapse: collapse; }
+/* line 140, ../sass/includes/_typography.scss */
+.typography td { border: 1px solid #999999; padding: 5px; }
+/* line 144, ../sass/includes/_typography.scss */
+.typography .left { text-align: left; }
+/* line 147, ../sass/includes/_typography.scss */
+.typography .center { text-align: center; }
+/* line 150, ../sass/includes/_typography.scss */
+.typography .right { text-align: right; }
+/* line 153, ../sass/includes/_typography.scss */
+.typography img { border: none; }
+/* line 156, ../sass/includes/_typography.scss */
+.typography.right { float: right; margin-left: 20px; }
+/* line 160, ../sass/includes/_typography.scss */
+.typography.left { float: left; }
+/* line 163, ../sass/includes/_typography.scss */
+.typography.leftAlone { float: left; margin-right: 100%; }
+/* line 167, ../sass/includes/_typography.scss */
+.typography.center { float: none; margin-left: auto; margin-right: auto; display: block; }

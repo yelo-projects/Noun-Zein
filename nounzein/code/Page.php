@@ -79,4 +79,9 @@ class Page_Controller extends ContentController {
 	function themedCSS($name){
 		
 	}
+
+	function getCollections(){
+		return DataObject::get('Collection');
+	}
+	
 }

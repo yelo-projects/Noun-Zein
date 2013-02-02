@@ -8,6 +8,9 @@
 	font-size:12px;
 	line-height:25px;
 	color:#333;
+	.category-content{
+		display:none;
+	}
 	h1{
 		height:50px;
 		a, a img{border:none;margin:0;padding:0;}
@@ -27,20 +30,33 @@
 			padding:0;
 			margin:0;
 			background:#fff;
+			//background:rgba(255,255,255,.7);
+			cursor:pointer;
+		}
+		>h2{
+			&:after{
+				content:' \25BC';
+				font-size:60%;
+				text-decoration:none;
+			}
+			span{
+				//text-decoration:underline;
+			}
 		}
 		a{
 			width:100%;
 			height:25px;
 			display:block;
-			text-decoration:none;
 			color:#333;
 			&:hover{
-				background:#ccc;
-				text-decoration:none;
+				//background:#ccc;
+				//text-decoration:none;
+				text-decoration:underline;
 			}
 			&.current{
-				color:#fff;
-				background:#2F2F2F;
+				//color:#fff;
+				//background:#2F2F2F;
+				text-decoration:underline;
 				cursor:default;
 			}
 
@@ -51,30 +67,39 @@
 		}	
 		&#CategoriesMenu{
 			a{
-				background:#c0cced;
+				//background:#c0cced;
 			}
 			h2,a.current{
-				background:#8ea9f8;
+				//background:#8ea9f8;
 			}
 		}
 		&#CollectionsMenu{
 			a{
-				background:#fff4a4;
+				//background:#fff4a4;
 			}
 			h2,a.current{
-				background:#ffe564;
+				//background:#ffe564;
 			}
 		}
 		&#SiteMenu{
 			a{
-				background:#fff;
+				//background:#fff;
 			}
 			h2,a.current{
-				background:#fff;
+				//background:#fff;
 			}
 			a.current, a:hover{
-				color:#2F2F2F;
-				text-decoration:underline;
+				//color:#2F2F2F;
+				//text-decoration:underline;
+			}
+			ul{
+				//padding-left:50px;
+			}
+			#Logo{
+				display:block;
+				width:50px;
+				position:absolute;
+				left:0;
 			}
 		}
 	}

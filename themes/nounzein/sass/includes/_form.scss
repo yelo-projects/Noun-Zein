@@ -1,0 +1,124 @@
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+input.action {
+  padding: 2px;
+  font-size: 11px;
+  font-family: Verdana, Tahoma, Sans-serif;
+  &:hover, &:focus {
+    cursor: pointer;
+  }
+}
+
+form ul {
+  list-style: none;
+}
+
+.middleColumn {
+  display: block;
+  margin: 15px 10px 10px 0;
+  background: #e9e9e9;
+  padding: 4px;
+  width: 306px;
+  clear: left;
+}
+
+#Sidebar .middleColumn {
+  margin: 0 0 0 8px;
+  display: inline;
+}
+
+div.tab .field .middleColumn {
+  clear: none !important;
+  margin: 0 !important;
+  width: auto;
+}
+
+.middleColumn {
+  .middleColumn {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+  .message {
+    margin: 0;
+  }
+}
+
+input.text, textarea, select {
+  padding: 2px;
+  border: 1px solid #a7a7a7;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  width: 300px;
+}
+
+textarea {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 12px;
+}
+
+input:focus span, textarea:focus span {
+  border: 3px solid black;
+}
+
+form {
+  .date input {
+    &.month, &.day, &.year {
+      width: auto;
+    }
+  }
+  .datetime {
+    .clear {
+      clear: both;
+    }
+    .date, .time {
+      float: left;
+      clear: none;
+      width: auto;
+    }
+    .middleColumn .middleColumn, .date input, .time input {
+      width: auto;
+    }
+  }
+}
+
+select {
+  width: auto;
+}
+input[type="submit"]{
+  padding:10px;
+}
+
+.typography label {
+  display: block;
+  margin: 20px 0 -10px 0;
+  color: #777777;
+  em{
+    color:#990000;
+  }
+}
+
+label.right {
+  display: inline;
+}
+
+ul.optionset {
+  margin: 0;
+  overflow: hidden;
+  li {
+    margin: 6px 0;
+    clear: both;
+    input {
+      float: left;
+      margin: 0 6px;
+    }
+    label {
+      margin: 0;
+    }
+  }
+}
