@@ -15,16 +15,18 @@ class GalleryImage extends Image{
 	
 	static $_Title;
 
-	public function Title(){
+	public function nameToTitle($title=null){
+		if(!$title){$title = $this->Name;};
 		if(!$this->_Title){
-			preg_match('/(?:\d{0,3}-?)([\s\w-.]*?)\.(?:jpg|jpeg|png|gif)/i', $this->Name,$t);
+			preg_match('/(?:\d{0,3}-?)([\s\w-.]*?)\.(?:jpg|jpeg|png|gif)/i', $title,$t);
 			$this->_Title = str_replace('-',' ',$t[1]);
 		}
 		return $this->_Title;
 	}
 
 	public function TitleXML(){
-		return strtolower(str_replace(' ','_',Convert::raw2xml($this->Title())));
+		$title = $this->nameToTitle();
+		return strtolower(str_replace(' ','_',Convert::raw2xml($title)));
 	}
 
 	public function getCollectionWebSafeName(){

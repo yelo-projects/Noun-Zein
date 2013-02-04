@@ -91,7 +91,9 @@ jQuery(document).ready(function($){
 	//$container.find('li a').colorbox({width:"75%", height:"75%"});
 
 	var showImage = function(state){
+		console.log(state);
 		var id = '#'+state.join('-');
+		console.log(id);
 		var $l = $imageLinks.filter(id);
 		var href= $l.data('href');
 		var rel = (currentState.indexOf('/collection') == 0)?
@@ -131,7 +133,12 @@ jQuery(document).ready(function($){
 		var docTitle = toTitleCase(title);
 		document.title = 'nounzein | ' + docTitle;
 		if(!all){
-			$('#'+state[0]+'-Title').html(toTitleCase(state[0] + ':' + docTitle));
+			var $title = $('#'+state[0]+'-Title')
+			$title.html(toTitleCase(state[0] + ':' + docTitle));
+			$titles.not($title).each(function(){
+				var $t = $(this);
+				$t.html($t.data('original'))
+			})
 		}else{
 			$titles.each(function(){
 				var $t = $(this);

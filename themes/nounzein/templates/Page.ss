@@ -58,7 +58,7 @@
 						</li>
 						<% end_control %>
 					</ul></li>
-					<li id="CategoriesMenu"><h2><span id="gallery-Title">Categories</span></h2><ul>
+					<li id="CategoriesMenu"><h2><span id="gallery-Title">Galleries</span></h2><ul>
 						<li class="item">
 							<a href="$BaseHref" title="Show All" id="gallery-all" class="filter current">All</a>
 						</li>
