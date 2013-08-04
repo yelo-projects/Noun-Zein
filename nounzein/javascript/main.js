@@ -63,6 +63,7 @@ jQuery(document).ready(function($){
 	,	$About = $('#About')
 	,	$lis = $('#MainMenu>li')
 	,	$imageLinks = $('#Gallery li a')
+	,	$Intro = $('#Intro')
 	;
 
 
@@ -134,7 +135,7 @@ jQuery(document).ready(function($){
 		document.title = 'nounzein | ' + docTitle;
 		if(!all){
 			var $title = $('#'+state[0]+'-Title')
-			$title.html(toTitleCase(state[0] + ':' + docTitle));
+			$title.html(toTitleCase(state[0] + ' - ' + docTitle));
 			$titles.not($title).each(function(){
 				var $t = $(this);
 				$t.html($t.data('original'))
@@ -147,14 +148,21 @@ jQuery(document).ready(function($){
 		}
 		$links.not($link).removeClass('current');
 		$lis.removeClass('clicked');
-		if(all || title == 'about'){
+		if(all || title == 'home'){
 			$About.show();
-		}else{
+			$Intro.show();
+		}else if(title == 'about'){
+			$About.show();
+			$Intro.hide();
+		}
+		else{
 			$About.hide();
+			$Intro.hide();
 		}
 		if(title == 'About'){
 			$container.isotope({filter:'none'});
 			$About.show();
+			$Intro.show();
 			return;
 		}
 		$Description.html(all ? '' : $link.next().html());

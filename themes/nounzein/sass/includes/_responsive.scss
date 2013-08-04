@@ -3,8 +3,7 @@
 	li{
 		position:relative;
 		>h2, ul li a, ul li{
-			height:50px;
-			font-size:150%;
+			height:60px;
 			line-height:2.5;
 		}
 		ul{
@@ -20,14 +19,6 @@
 		&:hover, &.clicked{
 			ul{
 				display:block;
-			}
-		}
-		&#SiteMenu{
-			ul{
-				padding-left:50px;
-				li{
-					margin-right:50px;
-				}
 			}
 		}
 	}

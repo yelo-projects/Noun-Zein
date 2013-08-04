@@ -1,0 +1,16 @@
+- add press releases in about us
+
+- Add a "all" option when selecting images for a collection ?
+
+- Add a description to all images. The admin section already contains a "Contents" section on images, can this be used to add description/legend/caption to images ? Preferably below the image. > Description will be used for materials / dimensions / price
+
+
+- What is the logic of the cropping of the images on the main page?
+
+- Can I redirect the user to a specific collection directly, so he doesn't land on the homepage at all times ?
+both are possible;
+We can send a link to a specific collection, for example, xxxx.com/#/gallery/bracelets
+and it is also possible to redirect to a specific collection, but you have to tell me which
+
+- What is the font used on the website ?
+Verdana, Lucida, Arial, sans-serif

@@ -111,4 +111,8 @@ Body{
 	}
 }
 
+#Navigation, #Navigation ul ul{
+	@include boxShadow(1px, 14px, 15px, 5px, rgba(0,0,0,.2));
+}
+
 @import "includes/responsive";

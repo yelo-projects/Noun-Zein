@@ -92,7 +92,7 @@ caption, th { text-align: left; }
 /* line 22, ../sass/includes/_colorbox.scss */
 #colorbox #cboxContent .cboxIframe { background: #fff; }
 /* line 23, ../sass/includes/_colorbox.scss */
-#colorbox #cboxContent #cboxError { padding: 50px; border: 1px solid #cccccc; }
+#colorbox #cboxContent #cboxError { padding: 50px; border: 1px solid #ccc; }
 /* line 24, ../sass/includes/_colorbox.scss */
 #colorbox #cboxContent #cboxLoadedContent { background: #000; padding: 1px; }
 /* line 25, ../sass/includes/_colorbox.scss */
@@ -136,7 +136,7 @@ a:hover { text-decoration: underline; }
 a:active, a:hover, a:visited { color: #6e6e6e; }
 
 /* line 1, ../sass/includes/_menus.scss */
-.menu { display: table; width: 100%; height: 50px; text-align: center; padding: 10px 0; font-size: 12px; line-height: 25px; color: #333; }
+.menu { display: table; width: 100%; height: 50px; text-align: center; padding: 10px 0; font-size: 25px; line-height: 25px; color: #333; }
 /* line 11, ../sass/includes/_menus.scss */
 .menu .category-content { display: none; }
 /* line 14, ../sass/includes/_menus.scss */
@@ -264,7 +264,7 @@ ul.optionset li label { margin: 0; }
 /* line 14, ../sass/includes/_typography.scss */
 .typography blockquote { margin: 10px; font-size: 1.4em; color: #777; font-style: italic; }
 /* line 20, ../sass/includes/_typography.scss */
-.typography q { display: block; font-size: 0.8em; margin: 1em 1em; padding: 0.5em; border: 1px #cccccc solid; }
+.typography q { display: block; font-size: 0.8em; margin: 1em 1em; padding: 0.5em; border: 1px #ccc solid; }
 /* line 27, ../sass/includes/_typography.scss */
 .typography a { color: #54a6de; text-decoration: none; }
 /* line 30, ../sass/includes/_typography.scss */
@@ -294,17 +294,17 @@ ul.optionset li label { margin: 0; }
 /* line 97, ../sass/includes/_typography.scss */
 .typography h3 { color: #7d785e; margin: 0 0 18px 0; font-weight: 300; clear: both; font-size: 18px; }
 /* line 104, ../sass/includes/_typography.scss */
-.typography h4 { font-size: 16px; color: #6f6a53; width: 95%; font-weight: 300; line-height: 18px; border-bottom: 1px solid #cccccc; margin: 0 0 16px 0; }
+.typography h4 { font-size: 16px; color: #6f6a53; width: 95%; font-weight: 300; line-height: 18px; border-bottom: 1px solid #ccc; margin: 0 0 16px 0; }
 /* line 113, ../sass/includes/_typography.scss */
 .typography h5 { font-size: 14px; color: #605c48; font-weight: 700; margin: 0 0 12px 0; }
 /* line 119, ../sass/includes/_typography.scss */
 .typography h6 { font-size: 13px; color: #524e3d; line-height: 1.4em; margin: 0 0 12px 0; }
 /* line 125, ../sass/includes/_typography.scss */
-.typography pre { font-family: "Courier New",Courier; display: block; font-size: 1.2em; margin: 2em 5em; padding: 0.5em; border: 1px #cccccc solid; background: #eee; }
+.typography pre { font-family: "Courier New",Courier; display: block; font-size: 1.2em; margin: 2em 5em; padding: 0.5em; border: 1px #ccc solid; background: #eee; }
 /* line 134, ../sass/includes/_typography.scss */
 .typography table { margin: 0 0 18px 0; font-size: 11px; color: #666; border-collapse: collapse; }
 /* line 140, ../sass/includes/_typography.scss */
-.typography td { border: 1px solid #999999; padding: 5px; }
+.typography td { border: 1px solid #999; padding: 5px; }
 /* line 144, ../sass/includes/_typography.scss */
 .typography .left { text-align: left; }
 /* line 147, ../sass/includes/_typography.scss */
@@ -329,7 +329,7 @@ ul.optionset li label { margin: 0; }
 Body { color: #eeeeee; font-family: Verdana, Lucida, Arial, sans-serif; background: #DDD; }
 
 /* line 33, ../sass/style.scss */
-#Body { padding-left: 20px; padding-right: 20px; padding-top: 0; padding-bottom: 0; background: none repeat scroll 0 0 white; color: #C6C6C6; }
+#Body { padding-left: 20px; padding-right: 20px; padding-top: 0; padding-bottom: 0; background: none repeat scroll 0 0 #fff; color: #C6C6C6; }
 
 /* line 45, ../sass/style.scss */
 #Footer { margin-top: 20px; font-size: 12px; }
@@ -366,36 +366,35 @@ Body { color: #eeeeee; font-family: Verdana, Lucida, Arial, sans-serif; backgrou
 /* line 109, ../sass/style.scss */
 #Header h1 { float: left; }
 
+/* line 114, ../sass/style.scss */
+#Navigation, #Navigation ul ul { -webkit-box-shadow: 1px 14px 15px 5px rgba(0, 0, 0, 0.2); -moz-box-shadow: 1px 14px 15px 5px rgba(0, 0, 0, 0.2); box-shadow: 1px 14px 15px 5px rgba(0, 0, 0, 0.2); }
+
 /* line 3, ../sass/includes/_responsive.scss */
 .menu li { position: relative; }
 /* line 5, ../sass/includes/_responsive.scss */
-.menu li > h2, .menu li ul li a, .menu li ul li { height: 50px; font-size: 150%; line-height: 2.5; }
-/* line 10, ../sass/includes/_responsive.scss */
+.menu li > h2, .menu li ul li a, .menu li ul li { height: 60px; line-height: 2.5; }
+/* line 9, ../sass/includes/_responsive.scss */
 .menu li ul { position: absolute; display: none; }
-/* line 13, ../sass/includes/_responsive.scss */
+/* line 12, ../sass/includes/_responsive.scss */
 .menu li ul li { display: block; }
-/* line 15, ../sass/includes/_responsive.scss */
+/* line 14, ../sass/includes/_responsive.scss */
 .menu li ul li a { line-height: 1.5; }
-/* line 21, ../sass/includes/_responsive.scss */
+/* line 20, ../sass/includes/_responsive.scss */
 .menu li:hover ul, .menu li.clicked ul { display: block; }
-/* line 26, ../sass/includes/_responsive.scss */
-.menu li#SiteMenu ul { padding-left: 50px; }
-/* line 28, ../sass/includes/_responsive.scss */
-.menu li#SiteMenu ul li { margin-right: 50px; }
 
-@media only screen and (max-width: 600px) { /* line 36, ../sass/includes/_responsive.scss */
+@media only screen and (max-width: 600px) { /* line 27, ../sass/includes/_responsive.scss */
   #Body { padding: 0px; }
-  /* line 39, ../sass/includes/_responsive.scss */
+  /* line 30, ../sass/includes/_responsive.scss */
   .menu, .menu li:hover, .menu ul { -webkit-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.2); box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.2); }
-  /* line 43, ../sass/includes/_responsive.scss */
+  /* line 34, ../sass/includes/_responsive.scss */
   .menu { position: fixed; }
-  /* line 46, ../sass/includes/_responsive.scss */
+  /* line 37, ../sass/includes/_responsive.scss */
   .menu li#SiteMenu { width: 50px; }
-  /* line 48, ../sass/includes/_responsive.scss */
+  /* line 39, ../sass/includes/_responsive.scss */
   .menu li#SiteMenu ul { padding-left: 0; width: 200px; }
-  /* line 51, ../sass/includes/_responsive.scss */
+  /* line 42, ../sass/includes/_responsive.scss */
   .menu li#SiteMenu ul li { margin-right: 0px; }
-  /* line 55, ../sass/includes/_responsive.scss */
+  /* line 46, ../sass/includes/_responsive.scss */
   .menu li#SiteMenu > h2 span { display: none; }
-  /* line 61, ../sass/includes/_responsive.scss */
+  /* line 52, ../sass/includes/_responsive.scss */
   .links { font-size: 20px; } }
