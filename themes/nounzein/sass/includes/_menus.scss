@@ -1,7 +1,7 @@
 .menu{
 	@extend .listreset;
 	display:table;
-	width:100%;
+	width:99%;
 	height:50px;
 	text-align:center;
 	padding:10px 0;
@@ -105,6 +105,9 @@
 	}
 	>li{
 		height:50px;
+		display:block;
+		float:left;
+		width:33%;
 	}
 }
 

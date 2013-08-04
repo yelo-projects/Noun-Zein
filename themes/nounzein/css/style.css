@@ -136,7 +136,7 @@ a:hover { text-decoration: underline; }
 a:active, a:hover, a:visited { color: #6e6e6e; }
 
 /* line 1, ../sass/includes/_menus.scss */
-.menu { display: table; width: 100%; height: 50px; text-align: center; padding: 10px 0; font-size: 25px; line-height: 25px; color: #333; }
+.menu { display: table; width: 99%; height: 50px; text-align: center; padding: 10px 0; font-size: 25px; line-height: 25px; color: #333; }
 /* line 11, ../sass/includes/_menus.scss */
 .menu .category-content { display: none; }
 /* line 14, ../sass/includes/_menus.scss */
@@ -162,11 +162,11 @@ a:active, a:hover, a:visited { color: #6e6e6e; }
 /* line 98, ../sass/includes/_menus.scss */
 .menu li#SiteMenu #Logo { display: block; width: 50px; position: absolute; left: 0; }
 /* line 106, ../sass/includes/_menus.scss */
-.menu > li { height: 50px; }
+.menu > li { height: 50px; display: block; float: left; width: 33%; }
 
-/* line 112, ../sass/includes/_menus.scss */
+/* line 115, ../sass/includes/_menus.scss */
 #Footer .menu { width: auto; display: inline; }
-/* line 116, ../sass/includes/_menus.scss */
+/* line 119, ../sass/includes/_menus.scss */
 #Footer p { display: inline; }
 
 /* line 1, ../sass/includes/_form.scss */
@@ -367,7 +367,7 @@ Body { color: #eeeeee; font-family: Verdana, Lucida, Arial, sans-serif; backgrou
 #Header h1 { float: left; }
 
 /* line 114, ../sass/style.scss */
-#Navigation, #Navigation ul ul { -webkit-box-shadow: 1px 14px 15px 5px rgba(0, 0, 0, 0.2); -moz-box-shadow: 1px 14px 15px 5px rgba(0, 0, 0, 0.2); box-shadow: 1px 14px 15px 5px rgba(0, 0, 0, 0.2); }
+#Navigation ul ul { -webkit-box-shadow: 1px 14px 15px 5px rgba(0, 0, 0, 0.2); -moz-box-shadow: 1px 14px 15px 5px rgba(0, 0, 0, 0.2); box-shadow: 1px 14px 15px 5px rgba(0, 0, 0, 0.2); }
 
 /* line 3, ../sass/includes/_responsive.scss */
 .menu li { position: relative; }
